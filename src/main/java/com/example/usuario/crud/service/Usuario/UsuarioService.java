@@ -3,7 +3,6 @@ package com.example.usuario.crud.service.Usuario;
 import com.example.usuario.crud.entitys.Usuario;
 import com.example.usuario.crud.repository.UsuarioRepository;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.UUID;
 

@@ -1,10 +1,8 @@
 package com.example.usuario.crud.controller;
 
-
 import com.example.usuario.crud.entitys.Usuario;
 import com.example.usuario.crud.service.Usuario.UsuarioService;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 import java.util.UUID;
 
