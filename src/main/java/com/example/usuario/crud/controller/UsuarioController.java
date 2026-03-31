@@ -10,7 +10,7 @@ import java.util.UUID;
 
 
 @RestController
-@RequestMapping("/usuario")
+@RequestMapping("/api")
 public class UsuarioController {
 
     private final UsuarioService usuarioService;
@@ -19,27 +19,27 @@ public class UsuarioController {
         this.usuarioService = usuarioService;
     }
 
-    @PostMapping("/criar")
+    @PostMapping("/usuarios")
     public Usuario criarUsuario(@RequestBody Usuario usuario){
         return usuarioService.criarUsuario(usuario);
     }
 
-    @GetMapping("/listar")
+    @GetMapping("/usuarios")
     public List<Usuario> listaUsuario(){
         return usuarioService.listarUsuario();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/usuarios/{id}")
     public Usuario buscarPorId(@PathVariable UUID id){
         return usuarioService.buscarPorId(id);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/usuarios/{id}")
         public Usuario atualizar(@PathVariable UUID id, @RequestBody Usuario usuario){
         return usuarioService.atualizarUsario(id, usuario);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/usuarios/{id}")
     public void deletarUsuarioPorId(@PathVariable UUID id){
          usuarioService.deletarUsuario(id);
     }
